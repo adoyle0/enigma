@@ -1,0 +1,9 @@
+.Rotor {
+    background-image: linear-gradient(#111, #ddd, #111);
+    color: black;
+    outline-style: dashed;
+    outline-width: .2em;
+    outline-offset: -.1em;
+    padding:.2em;
+    margin: .05em;
+}
