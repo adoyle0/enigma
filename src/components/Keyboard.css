@@ -6,6 +6,7 @@
 }
 .Keyboard {
     margin: auto;
+    opacity: 0.9;
 }
 .Key {
     text-align: center;
@@ -16,5 +17,6 @@
     background-color: var(--keyback);
     color: var(--keytext);
     outline-style: solid;
-    outline-color: #555;
+    outline-width: 1px;
+    outline-color: #DDD;
 }

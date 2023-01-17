@@ -2,6 +2,8 @@
     margin: auto;
     width: 350px;
     outline-style: solid;
-    outline-color: #DA9475;
-    background-color: #111;
+    outline-color: #B87253;
+    background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url('media/noise.svg');
 }

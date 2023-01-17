@@ -6,6 +6,7 @@
 }
 .Lightbox {
     margin: auto;
+    opacity: 0.9;
 }
 .row {
     display: flex;
@@ -20,4 +21,7 @@
     text-align: center;
     background-color: var(--bulbdim);
     color: var(--textdim);
+    border: solid;
+    border-width: 1px;
+    border-color: #000;
 }
