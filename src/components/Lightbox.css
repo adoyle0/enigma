@@ -1,0 +1,23 @@
+:root {
+    --bulbsize: 1.3em;
+    --spacing: .1em;
+    --bulbdim: #151515;
+    --textdim: #454545;
+}
+.Lightbox {
+    margin: auto;
+}
+.row {
+    display: flex;
+    justify-content:center;
+    padding: var(--spacing);
+}
+.Bulb {
+    margin: var(--spacing);
+    width: var(--bulbsize);
+    height: var(--bulbsize);
+    border-radius: var(--bulbsize);
+    text-align: center;
+    background-color: var(--bulbdim);
+    color: var(--textdim);
+}

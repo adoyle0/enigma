@@ -2,9 +2,6 @@ import React from 'react';
 import './Rotor.css';
 
 class Rotor extends React.Component {
-    constructor(props) {
-        super(props)
-    }
     letter(i) {
         const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         if (i > 25) {
@@ -15,14 +12,6 @@ class Rotor extends React.Component {
         }
         else {
             return alphabet[i]
-        }
-    }
-    tick() {
-        if (this.state.pos === 25) {
-            this.setState((state) => ({pos: 0}));
-        }
-        else {
-            this.setState((state) => ({pos: state.pos + 1}));
         }
     }
     render() {

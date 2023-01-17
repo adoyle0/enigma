@@ -1,0 +1,20 @@
+:root {
+    --keysize: 1.3em;
+    --keyspacing: .2em;
+    --keyback: #353535;
+    --keytext: #ddd;
+}
+.Keyboard {
+    margin: auto;
+}
+.Key {
+    text-align: center;
+    width: var(--keysize);
+    height: var(--keysize);
+    border-radius: var(--keysize);
+    margin: var(--keyspacing);
+    background-color: var(--keyback);
+    color: var(--keytext);
+    outline-style: solid;
+    outline-color: #555;
+}

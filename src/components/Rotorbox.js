@@ -10,8 +10,8 @@ class Rotorbox extends React.Component {
             rotor0: 11,
             rotor1: 8,
             rotor2: 6,
-            rotor3: 12,
-            rotor4: 0
+            rotor3: 11,
+            rotor4: 23
         };
     }
     tick() {
@@ -19,60 +19,37 @@ class Rotorbox extends React.Component {
         audio.loop = false;
         audio.playbackRate = 3.0;
         audio.play();
-        if (this.state.rotor4 > 24) {
+        this.setState(state => ({
+            rotor4: state.rotor4 +1
+        }));
+        if (this.state.rotor4 === 25) {
             this.setState(state => ({
                 rotor3: state.rotor3 +1,
                 rotor4: 0
             }));
         }
-        if (this.state.rotor3 > 24) {
+        if (this.state.rotor3 === 25) {
             this.setState(state => ({
                 rotor2: state.rotor2 +1,
                 rotor3: 0
             }));
         }
-        if (this.state.rotor2 > 24) {
+        if (this.state.rotor2 === 25) {
             this.setState(state => ({
                 rotor1: state.rotor1 +1,
                 rotor2: 0
             }));
         }
-        if (this.state.rotor1 > 24) {
+        if (this.state.rotor1 === 25) {
             this.setState(state => ({
                 rotor0: state.rotor0 +1,
                 rotor1: 0
             }));
         }
-        else {
-            this.setState(state => ({
-                rotor4: state.rotor4 +1
-            }));
-        }
-    }
-    componentDidMount() {
-        this.timerID = setInterval(
-            () => this.tick(),
-            200
-        );
-    }
-    componentWillUnmount() {
-        clearInterval(this.timerID);
-    }
-    lulz() {
-        let balls = {
-            rotor0: 2,
-            rotor1: 0,
-            rotor2: 11,
-            rotor3: 11,
-            rotor4: 25
-        }
-        if (this.state !== balls) {
-        }
-
     }
     render() {
         return (
-            <div className='Rotorbox'>
+            <div className='Rotorbox' onClick={() => this.tick()}>
             <Rotor pos={this.state.rotor0}/>
             <Rotor pos={this.state.rotor1}/>
             <Rotor pos={this.state.rotor2}/>
