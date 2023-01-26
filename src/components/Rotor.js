@@ -2,16 +2,16 @@ import React from 'react';
 import './Rotor.css';
 
 class Rotor extends React.Component {
-    letter(i) {
+    letter(pos) {
         const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        if (i > 25) {
-            return alphabet[i - 26]
+        if (pos > 25) {
+            return alphabet[pos - 26]
         }
-        else if (i < 0) {
-            return alphabet[26 + i]
+        else if (pos < 0) {
+            return alphabet[26 + pos]
         }
         else {
-            return alphabet[i]
+            return alphabet[pos]
         }
     }
     render() {
